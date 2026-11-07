@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Bakery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <div class="brand">
+            <img src="img/logo-01-01.png" alt="Coffee & Bakery logo">COFFEE & BAKERY
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+                <a href="#menu">Menu</a>
+                <ul class="dropdown">
+                        <li><a href="#coffee">COFFEE</a></li>
+                        <li><a href="#signatures">SIGNATURES</a></li>
+                        <li><a href="#non-coffee">NON-COFFEE</a></li>
+                        <li><a href="#food">FOOD</a></li>
+                        <li><a href="#desserts">DESSERTS</a></li>
+                </ul>
+            </li>
+            <li><a href="#environment">View</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <img src="img/f4b468c720a97521602be6095de1abec.jpg" alt="Inside Coffee & Bakery">
+        <div class="hero-text">
+            <p class="hero-welcome">Welcome To</p>
+            <h1>Coffee & Bakery</h1>
+            <p><b>Best quality & Best taste</b></p>
+            <a href="#menu" class="cta">Watch Menu</a>
+            <a href="#order" class="cta">Coffee Order</a>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-board">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Made with passion. Served with love.</p>
+        <div class="menu-boxes">
+                <div class="menu-box">
+                    <p><strong>COFFEE</strong></p>
+                    <ul class="menu-list" id="coffee-list"></ul>
+                    <hr>
+                    <a href="#coffee">VIEW ALL</a>
+                </div>
+                <div class="menu-box">
+                    <p><strong>SIGNATURES</strong></p>
+                    <ul class="menu-list" id="signatures-list"></ul>
+                    <hr>
+                    <a href="#signatures">VIEW ALL</a>
+                </div>
+                <div class="menu-box">
+                    <p><strong>NON-COFFEE</strong></p>
+                    <ul class="menu-list" id="non-coffee-list"></ul>
+                    <hr>
+                    <a href="#non-coffee">VIEW ALL</a>
+                </div>
+                <div class="menu-box">
+                    <p><strong>FOOD</strong></p>
+                    <ul class="menu-list" id="food-list"></ul>
+                    <hr>
+                    <a href="#food">VIEW ALL</a>
+                </div>
+                <div class="menu-box">
+                    <p><strong>DESSERTS</strong></p>
+                    <ul class="menu-list" id="desserts-list"></ul>
+                    <hr>
+                    <a href="#desserts">VIEW ALL</a>
+                </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="featured-title">FEATURED</h2>
+        <div class="about">
+            <img src="img/507bb4352c6cb87ae99ecc83698c80c2.jpg" class="about-img" alt="Our coffee shop">
+
+            <div class="reasons">
+                <h2>Why Choose Us?</h2>
+
+                <div class="reason-card">
+                    <h3>Richness in Every Cup</h3>
+                    <p>Each brew offers a balance of aroma, body, acidity, and aftertaste — not just caffeine,
+                        but a sensory journey. The richness isn’t only in the drink — it’s in the cozy
+                        environment, music, and hospitality that make customers linger.</p>
+                </div>
+
+                <div class="reason-card">
+                    <h3>Professional baristas</h3>
+                    <p>
+                        <strong>Warm greetings:</strong> A smile and friendly tone set the mood for the entire visit.<br>
+                        <strong>Personalized service:</strong> Remembering regulars’ names or favorite drinks makes customers feel valued.<br>
+                        <strong>Atmosphere building:</strong> Baristas influence the vibe with music choices, latte art, and casual conversation.<br>
+                        <!-- TODO: the original text for "Customer education" was cut off after "experience relaxed." -->
+                        <strong>Customer education:</strong> experience relaxed.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <h3>Many points of sale</h3>
+                    <p>
+                        <strong>Customer convenience:</strong> People can find your coffee easily, whether at a flagship café, a kiosk, or a partner store.<br>
+                        <strong>Brand visibility:</strong> More outlets increase exposure, helping the café become a recognizable name in the community.<br>
+                        <strong>Revenue growth:</strong> Expanding sales channels boosts income by reaching different customer segments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coffee" class="highlights coffee">
+        <h2 class="section-title">-Top Menu Highlights-</h2>
+        <p class="section-subtitle">Explore The Recent Most Bought Drink This Week</p>
+        <div class="container">
+            <div class="row justify-content-center g-4" id="coffee-cards"></div>
+        </div>
+    </section>
+
+    <section id="signatures" class="highlights coffee">
+        <h2 class="section-title">-Top Menu Highlights-</h2>
+        <p class="section-subtitle">Explore The Recent Most Bought Shake This Week</p>
+        <div class="container">
+            <div class="row justify-content-center g-4" id="signatures-cards"></div>
+        </div>
+    </section>
+
+    <section id="non-coffee" class="highlights other">
+        <h2 class="section-title">-Top Menu Highlights-</h2>
+        <p class="section-subtitle">Explore The Recent Most Bought Non-Coffee This Week</p>
+        <div class="container">
+            <div class="row justify-content-center g-4" id="non-coffee-cards"></div>
+        </div>
+    </section>
+
+    <section id="food" class="highlights other">
+        <h2 class="section-title">-Top Menu Highlights-</h2>
+        <p class="section-subtitle">Explore The Recent Most Bought Food This Week</p>
+        <div class="container">
+            <div class="row justify-content-center g-4" id="food-cards"></div>
+        </div>
+    </section>
+
+    <section id="desserts" class="highlights other">
+        <h2 class="section-title">-Top Menu Highlights-</h2>
+        <p class="section-subtitle">Explore The Recent Most Bought Desserts This Week</p>
+        <div class="container">
+            <div class="row justify-content-center g-4" id="desserts-cards"></div>
+        </div>
+    </section>
+
+    <section id="environment" class="environment">
+        <h2 class="section-title">The Best Environment</h2>
+        <p class="section-subtitle">Premium and fresh</p>
+        <div class="environment-photos">
+            <img src="img/t.jpg" class="circle-photo" alt="Cafe photo 1">
+            <img src="img/y.jpg" class="circle-photo" alt="Cafe photo 2">
+            <img src="img/u.jpg" class="circle-photo" alt="Cafe photo 3">
+            <img src="img/o.jpg" class="circle-photo" alt="Cafe photo 4">
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">Customers get drinks full of creative and special flavors</p>
+        <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/1839b51798c581c9219f3d7ccd62cbda.jpg" alt="Brownie"></div>
+                    <p>Brownie</p>
+                    <span>VIP chocolate with the best baking soda</span>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/d332fd633190b268c74c5ffe21ab98bb.jpg" alt="Cappuccino"></div>
+                    <p>Cappuccino</p>
+                    <span>Best coffee and hot milk</span>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/icetea.jpg" alt="Ice Tea"></div>
+                    <p>Ice Tea</p>
+                    <span>Taste tea and ice with lemon</span>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/chai.jpg" alt="Mocha"></div>
+                    <p>Mocha</p>
+                    <span>Taste coffee full of cream</span>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/delight.png" alt="Mocha Delight"></div>
+                    <p>Mocha Delight</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/Haza.png" alt="Hazelnut Dream"></div>
+                    <p>Hazelnut Dream</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/cream.png" alt="Cookies & Frappé"></div>
+                    <p>Cookies & Frappé</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="img/maple.png" alt="Maple Spice"></div>
+                    <p>Maple Spice</p>
+                </div>
+        </div>
+    </section>
+
+    <section id="order" class="order">
+        <h2 class="section-title">Coffee Order</h2>
+        <p class="section-subtitle">Choose your drink, enter how many, then press Place Order</p>
+
+        <div class="order-wrap">
+            <div class="order-form">
+                <label for="customerName">Your name:</label>
+                <input class="form-input" type="text" id="customerName" maxlength="20" placeholder="Enter your name">
+
+                <label for="drinkSelect">Drink or food:</label>
+                <select class="form-input" id="drinkSelect"></select>
+
+                <label for="quantity">How many?</label>
+                <input class="form-input" type="number" id="quantity" value="1" min="1" max="20">
+
+                <button type="button" class="cta" onclick="addToOrder()">Add to Order</button>
+
+                <p id="orderResult"></p>
+
+                <div id="orderBox">
+                    <h3>Your Order</h3>
+                    <ul id="orderList"></ul>
+                    <p class="order-total">Total: $<span id="orderTotal">0.00</span></p>
+
+                    <p>Do you want to add more?</p>
+                    <button type="button" class="cta" onclick="addMore()">Yes, add more</button>
+                    <button type="button" class="cta cta-finish" onclick="finishOrder()">No, finish order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+
+            <!-- Column 1: shop name -->
+            <div class="footer-col">
+                <p class="footer-brand">
+                    <img src="img/logo-01-01.png" class="footer-logo" alt="Coffee & Bakery logo">
+                    Coffee & Bakery
+                </p>
+                <p class="footer-text">Best quality & Best taste. Made with passion. Served with love.</p>
+            </div>
+
+            <!-- Column 2: find us -->
+            <div class="footer-col">
+                <h3>Find Our Coffee Shop</h3>
+                <ul class="footer-list">
+                    <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+855 95 527 059</span></li>
+                    <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="">Coffee&Bakery@gmail.com</a></li>
+                    <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><a href="https://www.google.com/maps/place/SETEC+Institute/@11.5680861,104.8921566,17z/data=!3m1!4b1!4m6!3m5!1s0x31095173761d4a53:0xcd09ff2f4d326e3f!8m2!3d11.5680861!4d104.8947315!16s%2Fg%2F11r8vvxw9?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">See us on the map</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: social icons -->
+            <div class="footer-col">
+                <h3>Follow Coffee & Bakery</h3>
+                <div class="social-icons">
+                    <a href="" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="" target="_blank" rel="noopener" aria-label="Telegram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></a>
+                    <a href="" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon tiktok-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom line -->
+        <div class="footer-bottom">© 2026 Coffee & Bakery. All rights reserved.</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        
+        const coffee = [
+            { name: "Espresso",   price: 2.20, image: "img/4e3dc8baad6fcfe6c8e08f8d32a1ae43.jpg", description: "Strong and bold coffee with a sweet, caramel taste." },
+            { name: "Americano",  price: 2.80, image: "img/90c5b90b19b30746af60742d6311ac66.jpg", description: "Espresso with hot water. Smooth and mellow." },
+            { name: "Latte",      price: 2.20, image: "img/1564e0b50862040029cc4270e2f70a12.jpg", description: "Espresso with lots of steamed milk. Creamy and smooth." },
+            { name: "Cappuccino", price: 3.60, image: "img/4de40c8bbd7ca5c9a76587faf386d444 (1).jpg", description: "Espresso, steamed milk and thick foam. Light and airy." },
+            { name: "Mocha",      price: 3.60, image: "img/b18d50fa62686644792732a3f609275f.jpg", description: "Espresso with chocolate and steamed milk." },
+            { name: "Macchiato",  price: 3.40, image: "img/chai.jpg", description: "Espresso marked with a little milk foam. Sweet and strong." }
+        ];
+
+        const signatures = [
+            { name: "Cookies & Frappé", price: 3.70, image: "img/cream.png",   description: "Iced coffee blended with crushed chocolate cookies." },
+            { name: "Mocha Delight",    price: 2.90, image: "img/delight.png", description: "Cocoa and espresso with whipped cream." },
+            { name: "Maple Spice",      price: 2.70, image: "img/maple.png",   description: "Espresso with maple syrup and a little cinnamon." },
+            { name: "Caramel",          price: 3.20, image: "img/caramel.jpg", description: "Espresso with sweet caramel and creamy milk." },
+            { name: "Hazelnut Dream",   price: 3.40, image: "img/Haza.png",    description: "Espresso with roasted hazelnut and creamy milk." },
+            { name: "Vanilla Cloud",    price: 4.10, image: "img/vannila.png", description: "Espresso with vanilla and airy milk foam." }
+        ];
+
+        const nonCoffee = [
+            { name: "Matcha Latte",  price: 2.90, image: "img/Mmacha.jpg",  description: "Green tea powder with smooth, creamy milk." },
+            { name: "Hot Chocolate", price: 3.10, image: "img/choco.jpg",   description: "Warm, sweet and rich chocolate drink." },
+            { name: "Chai Latte",    price: 3.30, image: "img/chai.jpg",    description: "Spiced tea with cinnamon, cardamom and milk." },
+            { name: "Iced Tea",      price: 3.50, image: "img/icetea.jpg",  description: "Cold black tea with a little sweetness and mint." },
+            { name: "Lemonade",      price: 2.60, image: "img/lemond.jpg",  description: "Fresh lemon drink. Sharp, sour and refreshing." },
+            { name: "Milk Tea",      price: 2.60, image: "img/milktea.jpg", description: "Tea with creamy milk. Soft and sweet." }
+        ];
+
+        const food = [
+            { name: "Butter Croissant", price: 2.90, image: "img/crosant1.jpg", description: "Flaky, buttery layers with a golden crust." },
+            { name: "Avocado Toast",    price: 4.20, image: "img/avocado.jpg",  description: "Toasted bread with creamy mashed avocado." },
+            { name: "Bagel & Cream",    price: 3.20, image: "img/bread.jpg",    description: "Fresh bagel with smooth cream cheese." },
+            { name: "Chicken Panini",   price: 3.80, image: "img/chicken.jpg",  description: "Grilled chicken and cheese in toasted bread." },
+            { name: "Granola Bowl",     price: 2.80, image: "img/nut.jpg",      description: "Crunchy granola with fresh fruit." },
+            { name: "Salad",            price: 2.80, image: "img/salad.jpg",    description: "Fresh greens with herbs and a lemon dressing." }
+        ];
+
+        const desserts = [
+            { name: "Cheesecake", price: 4.20, image: "img/cake.jpg",     description: "Creamy cheesecake on a graham crust." },
+            { name: "Brownie",    price: 4.20, image: "img/1839b51798c581c9219f3d7ccd62cbda.jpg", description: "Fudgy chocolate brownie with the best chocolate." },
+            { name: "Tiramisu",   price: 3.20, image: "img/tiramiu.jpg",  description: "Coffee-soaked biscuits with mascarpone cream." },
+            { name: "Cookies",    price: 2.60, image: "img/cookie.jpg",   description: "Freshly baked with crispy edges and a chewy center." },
+            { name: "Muffin",     price: 2.90, image: "img/muin.jpg",     description: "Soft muffin with fruit or chocolate." },
+            { name: "Ice Cream",  price: 2.90, image: "img/22a7d0ce7700f7169b5990609f5d458f.jpg", description: "Sweet, cold cream with fruit toppings." }
+        ];
+
+        const allItems = coffee.concat(signatures, nonCoffee, food, desserts);
+
+        // Turns 2.2 into "$2.20"
+        function formatPrice(price) {
+            return "$" + price.toFixed(2);   
+        }
+
+        // Makes one card for every item and puts them in the box
+        function showCards(items, boxId) {
+
+            let allCards = "";
+
+            for (let i = 0; i < items.length; i++) {
+
+                let item = items[i];
+
+                let card = "";
+                card = card + '<div class="col-12 col-md-4">';
+                card = card + '  <div class="card menu-card mx-auto">';
+                card = card + '    <img src="' + item.image + '" class="card-img-top" alt="' + item.name + '">';
+                card = card + '    <div class="card-body">';
+                card = card + '      <h5 class="card-title fw-bold">' + item.name + '</h5>';
+                card = card + '      <p class="fw-bold">' + formatPrice(item.price) + '</p>';
+                card = card + '      <p class="card-text">' + item.description + '</p>';
+                card = card + '      <button class="btn btn-success" onclick="chooseDrink(' + allItems.indexOf(item) + ')">Order Now!</button>';
+                card = card + '    </div>';
+                card = card + '  </div>';
+                card = card + '</div>';
+
+                allCards = allCards + card;
+            }
+
+            document.getElementById(boxId).innerHTML = allCards;
+        }
+
+        // Makes one price line for every item
+        function showPriceList(items, listId) {
+
+            let allLines = "";
+
+            for (let i = 0; i < items.length; i++) {
+                let line = "";
+                line = line + '<li>';
+                line = line + '<span class="name">' + items[i].name + '</span>';
+                line = line + '<span class="price">' + formatPrice(items[i].price) + '</span>';
+                line = line + '</li>';
+
+                allLines = allLines + line;
+            }
+
+            document.getElementById(listId).innerHTML = allLines;
+        }
+
+        // Fills the drink list in the order form
+        function fillDrinkList() {
+            let options = "";
+
+            for (let i = 0; i < allItems.length; i++) {
+                options = options + '<option value="' + i + '">' + allItems[i].name + ' - ' + formatPrice(allItems[i].price) + '</option>';
+            }
+
+            document.getElementById("drinkSelect").innerHTML = options;
+        }
+
+        // "Order Now!" on a card: choose that drink and jump to the form
+        function chooseDrink(drinkNumber) {
+            document.getElementById("drinkSelect").value = drinkNumber;
+            window.location = "#order";
+        }
+
+       
+        let myOrder = [];
+
+
+        function showOrder() {
+            let lines = "";
+            let total = 0;
+
+            for (let i = 0; i < myOrder.length; i++) {
+                let thing = myOrder[i];
+                let thingPrice = thing.price * thing.quantity;
+                total = total + thingPrice;
+
+                lines = lines + '<li class="order-line">';
+                lines = lines + '<span>' + thing.quantity + ' x ' + thing.name + ' - ' + formatPrice(thingPrice) + '</span>';
+                lines = lines + '<button class="remove-btn" onclick="removeItem(' + i + ')">Remove</button>';
+                lines = lines + '</li>';
+            }
+
+            document.getElementById("orderList").innerHTML = lines;
+            document.getElementById("orderTotal").textContent = total.toFixed(2);
+
+            let box = document.getElementById("orderBox");
+            if (myOrder.length > 0) {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+
+        // Button: Add to Order
+        function addToOrder() {
+            let name = document.getElementById("customerName").value;
+            let drinkNumber = document.getElementById("drinkSelect").value;
+            let quantity = Number(document.getElementById("quantity").value);   
+            let message = document.getElementById("orderResult");
+
+            if (name == "") {
+                message.textContent = "Please enter your name.";
+                message.className = "error";
+                return;
+            }
+            if (quantity < 1) {
+                message.textContent = "Please choose 1 or more.";
+                message.className = "error";
+                return;
+            }
+
+            let item = allItems[drinkNumber];
+            myOrder.push({ name: item.name, price: item.price, quantity: quantity });
+
+            message.textContent = quantity + " x " + item.name + " added! Do you want to add more?";
+            message.className = "success";
+            document.getElementById("quantity").value = 1;
+            showOrder();
+        }
+
+        // Button: Remove
+        function removeItem(i) {
+            myOrder.splice(i, 1);   // remove 1 thing at position i
+            showOrder();
+        }
+
+        // Button: Yes, add more
+        function addMore() {
+            let message = document.getElementById("orderResult");
+            message.textContent = "Great! Choose another drink or food, then press Add to Order.";
+            message.className = "success";
+            document.getElementById("drinkSelect").focus();
+        }
+
+        // Button: No, finish order
+        function finishOrder() {
+            let name = document.getElementById("customerName").value;
+            let message = document.getElementById("orderResult");
+            let summary = "";
+            let total = 0;
+
+            for (let i = 0; i < myOrder.length; i++) {
+                summary = summary + myOrder[i].quantity + " x " + myOrder[i].name;
+
+                if (i < myOrder.length - 1) {
+                    summary = summary + ", ";
+                }
+                total = total + myOrder[i].price * myOrder[i].quantity;
+            }
+
+            message.textContent = "Thank you, " + name + "! Your order: " + summary + ". Total: " + formatPrice(total);
+            message.className = "success";
+
+            myOrder = [];
+            showOrder();
+        }
+
+       
+        fillDrinkList();
+
+        showCards(coffee, "coffee-cards");
+        showCards(signatures, "signatures-cards");
+        showCards(nonCoffee, "non-coffee-cards");
+        showCards(food, "food-cards");
+        showCards(desserts, "desserts-cards");
+
+        showPriceList(coffee, "coffee-list");
+        showPriceList(signatures, "signatures-list");
+        showPriceList(nonCoffee, "non-coffee-list");
+        showPriceList(food, "food-list");
+        showPriceList(desserts, "desserts-list");
+    </script>
+</body>
+</html>

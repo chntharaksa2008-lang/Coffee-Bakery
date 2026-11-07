@@ -1,0 +1,601 @@
+:root {
+    --brown-dark: #5e3d12;
+    --brown: #855d08;
+    --gold: #9e760f;
+    --gold-hover: #715804;
+    --orange: #e98b21;
+    --nav-hover: #f39007;
+
+    --bg-menu: #d0cc9e;
+    --bg-coffee: #f5f2bc;
+    --bg-other: #f5dfbc;
+    --bg-environment: #ecefd8;
+    --bg-gallery: #efe0ca;
+    --bg-contact: #f6f8de;
+    --bg-footer: #f1d97f;
+
+    --font-main: "Poppins", "Battambang", "Khmer OS Battambang", sans-serif;
+
+    --shadow: 0 0 10px rgb(116, 115, 114);
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 17px;
+    line-height: 1.6;
+    color: #2b1d0e;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+.section-title {
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--font-main);
+}
+
+.section-subtitle {
+    text-align: center;
+}
+
+.cta {
+    display: inline-block;
+    width: 30%;
+    min-width: 140px;
+    margin: 0 6px 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--gold);
+    color: #fff;
+    font-family: var(--font-main);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cta:hover {
+    background: var(--gold-hover);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* 3. NAVBAR ----------------------------------------------- */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    background: var(--brown-dark);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.brand img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    padding: 5px 15px;
+    color: #fff;
+    font-family: var(--font-main);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--nav-hover);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #606518;
+}
+
+.nav-links li:hover > .dropdown {
+    display: block;
+}
+
+/* 4. HERO ------------------------------------------------- */
+.hero {
+    position: relative;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero-welcome {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* 5. MENU BOARD (price list) -------------------------------- */
+.menu-board {
+    padding-bottom: 40px;
+    background: var(--bg-menu);
+}
+
+.menu-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px 0;
+}
+
+.menu-box {
+    flex: 1 1 200px;
+    max-width: 280px;
+    padding: 10px;
+    border: 3px solid var(--brown);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-list li {
+    display: flex;
+    gap: 6px;
+}
+
+.menu-list .name {
+    display: flex;
+    flex: 1;
+}
+
+.menu-list .name::after {
+    content: "";
+    flex: 1;
+    margin: 0 0 5px 6px;
+    border-bottom: 2px dotted #985508;
+}
+
+.menu-box hr {
+    width: 50%;
+    margin: 30px auto 15px;
+    border: 2px solid brown;
+    opacity: 1;
+}
+
+/* 6. FEATURED / WHY CHOOSE US ------------------------------- */
+.featured-title {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    background: bisque;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    padding: 30px 40px;
+}
+
+.about-img {
+    flex: 0 0 45%;
+    width: 45%;
+    min-width: 0;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.reasons {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.reasons h2 { text-align: center; margin: 0; }
+
+.reason-card {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #8b6b2e;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.reason-card:hover {
+    transform: scale(1.02);
+}
+
+.reason-card h3 {
+    margin: 0 0 8px;
+    color: var(--orange);
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reason-card p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* 7. MENU CARDS (coffee, signatures, ...) ----------------- */
+.highlights {
+    padding: 20px 0 50px;
+}
+
+.highlights.coffee { background: var(--bg-coffee); }
+.highlights.other  { background: var(--bg-other); }
+
+.highlights .container {
+    margin-top: 30px;
+}
+
+.menu-card {
+    width: 18rem;
+}
+
+.menu-card img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* 8. ENVIRONMENT PHOTOS ----------------------------------- */
+.environment {
+    padding: 20px 0 40px;
+    background: var(--bg-environment);
+    text-align: center;
+}
+
+.environment-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    padding: 0 35px;
+}
+
+.circle-photo {
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgb(103, 50, 4);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.circle-photo:hover {
+    transform: scale(1.1);
+}
+
+/* 9. GALLERY ---------------------------------------------- */
+.gallery {
+    margin-top: 30px;
+    padding: 20px 0 40px;
+    background: var(--bg-gallery);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.gallery-item {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-img {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    background: gray;
+}
+
+.gallery-img img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    margin: 8px 0 0;
+    font-family: var(--font-main);
+    font-weight: bold;
+}
+
+/* 10. COFFEE ORDER ------------------------------------------- */
+.order {
+    padding-bottom: 30px;
+    background: var(--bg-contact);
+}
+
+.order-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+}
+
+.order-form {
+    width: 60%;
+    min-width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px rgb(174, 174, 174);
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px 1px rgb(211, 119, 43);
+}
+
+/* Footer */
+.site-footer {
+    background: #2b1d0e;
+    color: #e9dccb;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 25px 30px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.footer-text { margin: 0; color: var(--bg-footer); }
+
+.footer-col h3 {
+    margin: 0 0 15px;
+    color: var(--orange);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-list { margin: 0; padding: 0; list-style: none; }
+
+.footer-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.footer-list .icon { flex-shrink: 0; color: var(--orange); }
+
+.site-footer a { color: #e9dccb; text-decoration: none; transition: 0.3s; }
+.site-footer a:hover { color: var(--orange); }
+
+.social-icons { display: flex; gap: 12px; }
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 22px;
+}
+
+.social-icons a:hover {
+    background: var(--orange);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.tiktok-logo { fill: currentColor; stroke: none; }
+
+.footer-bottom {
+    padding: 18px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    font-size: 14px;
+    color: #a89479;
+}
+
+/* 11. RESPONSIVE ------------------------------------------ */
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .site-nav,
+    .nav-links { justify-content: center; }
+
+    .about { flex-direction: column; padding: 20px; }
+    .about-img { flex: none; width: 100%; max-height: 420px; }
+
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .order-wrap { flex-direction: column; align-items: center; padding: 20px; }
+    .order-form { width: 80%; }
+
+    .circle-photo { width: 180px; height: 180px; }
+    .cta { width: 60%; font-size: 16px; }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1,
+    .hero-welcome { font-size: 22px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .footer-list li, .social-icons { justify-content: center; }
+    .brand { font-size: 18px; }
+    .brand img { width: 54px; height: 54px; }
+    .footer-logo { width: 70px; height: 70px; }
+    .nav-links a { padding: 6px 8px; font-size: 14px; }
+
+    .featured-title { font-size: 18px; }
+    .about { padding: 15px; }
+    .reason-card { padding: 10px; }
+
+    .menu-boxes { padding: 20px 15px 0; }
+    .menu-card { width: 95%; }
+    .gallery-grid { grid-template-columns: 1fr; padding: 0 20px; }
+
+    .circle-photo { width: 150px; height: 150px; }
+    .order-wrap { padding: 10px; }
+    .order-form { width: 95%; }
+    .cta { width: 90%; font-size: 14px; }
+}
+
+/* 12. ORDER LIST (written by JavaScript) -------------------- */
+#orderResult { min-height: 1.5em; margin-top: 12px; font-weight: bold; }
+#orderResult.error { color: #b02a37; }
+#orderResult.success { color: #198754; }
+
+#orderBox {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    border: 2px dashed var(--brown);
+    border-radius: 10px;
+    background: #fff;
+}
+
+#orderList { margin: 0; padding: 0; list-style: none; }
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-btn {
+    border: none;
+    border-radius: 5px;
+    background: #b02a37;
+    color: #fff;
+    padding: 2px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.order-total { margin: 10px 0; font-size: 20px; font-weight: bold; }
+
+.order-form .cta { width: auto; min-width: 150px; padding: 8px 16px; margin: 0 6px 10px 0; }
+.cta-finish { background: #198754; }
+.cta-finish:hover { background: #146c43; }
